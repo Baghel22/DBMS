@@ -1,0 +1,10 @@
+create table client_master(
+client_No varchar(6),
+ Name varchar(20),
+address1 varchar(30),
+address2 varchar(30), 	
+City varchar(15), 
+state varchar(15), 
+Pincode number(6),
+ Bal_Due number(10,2)
+);
