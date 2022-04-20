@@ -1,0 +1,43 @@
+Ques 1  
+Table name : client_master
+
+create table Client_Master
+(
+client_no varchar(6),
+name varchar(20),
+address1 varchar(30),
+address2 varchar(30),
+city varchar(15),
+state varchar(15),
+pincode number(6),
+Bal_due number(10,2)
+);
+
+ Table name : Product_master
+
+create table Product_master
+(
+ product_no varchar(6),
+ description varchar(20),
+ profit_percentage number(6),
+ unit_measure varchar(10),
+ qty_on_hand number(6),
+ reorder_lvl number(6),
+ sell_price number(7,2),
+ cost_price number(7,2)
+ );
+Ques 2
+alter table client_master
+add(DOB date);
+Ques 3
+alter table client_master
+modify(client_no number(6));
+Ques 4
+alter table client_master
+drop column DOB;
+QUES 5
+ALTER TABLE PRODUCT_MASTER
+RENAME COLUMN SELL_PRICE TO SELLPRICE;
+QUES 6
+ALTER TABLE PRODUCT_MASTER
+RENAME TO PRODUCTMASTER;
