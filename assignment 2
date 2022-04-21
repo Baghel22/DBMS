@@ -1,0 +1,33 @@
+Table Creation - create table Client_Master( 
+ Client_no Varchar(6), 
+ Name Varchar(20), 
+ City Varchar(15), 
+ Pincode Number(6), 
+ State Varchar(20), 
+ Bal_Due number(10,2) ) 
+1 - 
+ insert into Client_Master values(00001,'Ivan Bayross','Mumbai',400054,'Maharastra',15000)
+ insert into Client_Master values(00002,'Mamta Mazumdar','Madras',780001,'Tamil Nadu',0)
+ insert into Client_Master values(00003,'Chhaya Bankar','Mumbai',400057,'Maharastra',5000)
+ insert into Client_Master values(00004,'Ashwani Joshi','Bangalore',560001,'Karnataka',0)
+ insert into Client_Master values(00005,'Hansel Colaco','Mumbai',560001,'Maharastra',2000)
+ insert into Client_Master values(00006,'Deepak Sharma','Mangalore',560050,'Karnataka',0)
+2 : a : Select NAME from Client_Master;
+ b : Select * from Client_Master;
+ c : Select NAME,CITY,STATE from Client_Master;
+ d : Select * from Client_Master Where CITY='Mumbai';
+ e : Select * from Client_Master Where BAL_DUE=15000;
+ f : Select * from Client_Master where NAME like 'M%';
+ g : Select * from Client_Master where STATE in ('Maharastra','Karnataka');
+3 : a : update Client_Master 
+ set CITY='Bangalore' 
+ where Client_no=00005;
+ b : update Client_Master 
+ set BAL_DUE=1000 
+ where Client_no=00001;
+ c : update Client_Master 
+ set CITY='Pune' 
+ where Client_no=00001;
+4 : a : ALTER TABLE Client_Master 
+ DROP COLUMN Client_no;
+ b : DELETE FROM Client_Master WHERE STATE='Tamil Nadu';
